@@ -11,7 +11,7 @@ const LandingScreen = () => {
 
     useEffect(() => {
         loggedUserDetails.dispatch({type: "setInitialState"});
-    },[loggedUserDetails])
+    },[])
 
     return (
         <div className='flex flex-col min-h-screen'>
