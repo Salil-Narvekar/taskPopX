@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useReducer, createContext } from 'react'
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import LandingScreen from "./Components/LandingScreen";
+import LoginScreen from "./Components/LoginScreen";
+import SignupScreen from "./Components/SignupScreen";
+import Profile from "./Components/Profile";
+
+export const LoggedUserDetails = createContext();
 
 function App() {
+
+  const initialUserState = {
+    email: '',
+    name: '',
+  };
+
+  const reducerUser = (state, action) => {
+    switch (action.type) {
+      case 'login':
+        return {
+          email: action.value.email,
+          name: action.value.name,
+        }
+      // return console.log("loggedIn", action.value);
+      
+      case 'setInitialState':
+        return initialUserState
+      default:
+        return initialUserState
+    }
+  }
+
+  const [loggedUser, dispatchUser] = useReducer(reducerUser, initialUserState);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LoggedUserDetails.Provider value={{ loggedUser: loggedUser, dispatch: dispatchUser }}>
+
+      <div className="text-center h-screen font-sans overflow-hidden" style={{ backgroundColor: '#F7F8F9' }}>
+        <HashRouter>
+          <Routes>
+            <Route path='/' element={<Navigate to='/landingScreen' />} />
+            <Route path='/landingScreen' element={<LandingScreen />} />
+            <Route path='/loginScreen' element={<LoginScreen />} />
+            <Route path='/signupScreen' element={<SignupScreen />} />
+            <Route path='/profile' element={<Profile />} />
+          </Routes>
+        </HashRouter>
+      </div>
+
+    </LoggedUserDetails.Provider>
   );
 }
 
