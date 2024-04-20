@@ -22,7 +22,7 @@ function App() {
           name: action.value.name,
         }
       // return console.log("loggedIn", action.value);
-      
+
       case 'setInitialState':
         return initialUserState
       default:
@@ -35,7 +35,7 @@ function App() {
   return (
     <LoggedUserDetails.Provider value={{ loggedUser: loggedUser, dispatch: dispatchUser }}>
 
-      <div className="text-center h-screen font-sans overflow-hidden" style={{ backgroundColor: '#F7F8F9' }}>
+      <div className="text-center h-screen font-sans overflow-hidden md:overflow-hidden lg:overflow-hidden sm:md:overflow-hidden xl:md:overflow-hidden" style={{ backgroundColor: '#F7F8F9' }}>
         <HashRouter>
           <Routes>
             <Route path='/' element={<Navigate to='/landingScreen' />} />
