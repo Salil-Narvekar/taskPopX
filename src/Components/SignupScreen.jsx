@@ -61,13 +61,13 @@ const SignupScreen = () => {
     }, [signUpDetails])
 
     return (
-        <div className='grid grid-rows-6 justify-items-start pl-4 pr-4 pb-8 pt-8 h-screen'>
+        <div className='grid justify-items-start pl-4 pr-4 pb-8 pt-8 h-screen'>
 
-            <div className='row-span-1 w-10/12'>
+            <div className='w-10/12 mb-4'>
                 <HeaderText text='Create your PopX account' />
             </div>
 
-            <div className='row-span-4 grid grid-rows-6 gap-2 w-full'>
+            <div className='grid grid-rows-6 gap-2 w-full'>
                 <InputField
                     name='name'
                     id='name'
@@ -186,31 +186,29 @@ const SignupScreen = () => {
                 </div>
             </div>
 
-            <div className='row-span-1 w-full h-full'>
-                <div className='grid grid-rows-2 gap-2'>
-                    {
-                        validate ?
-                            <div className='fixed'>
-                                <ValidationMsg errorMsg="All * marked fields are required" />
-                            </div>
-                            
-                            : validateEmail &&
-                            <div className='fixed'>
-                                <ValidationMsg errorMsg="Email should be in proper format abc@gamil.com" />
-                            </div>
-                    }
+            <div className='h-10 pt-4'>
+                {
+                    validate ?
+                        <div className=''>
+                            <ValidationMsg errorMsg="All * marked fields are required" />
+                        </div>
 
-                    <div className='pt-14'>
-                        <Button
-                            name='register'
-                            buttonLable='Create Account'
-                            color='primary'
-                            onClick={() => {
-                                createAccount();
-                            }}
-                        />
-                    </div>
-                </div>
+                        : validateEmail &&
+                        <div className=''>
+                            <ValidationMsg errorMsg="Email should be in proper format abc@gamil.com" />
+                        </div>
+                }
+            </div>
+
+            <div className='w-full pt-10'>
+                <Button
+                    name='register'
+                    buttonLable='Create Account'
+                    color='primary'
+                    onClick={() => {
+                        createAccount();
+                    }}
+                />
             </div>
         </div >
     )
