@@ -15,7 +15,7 @@ const Profile = () => {
     }, [loggedUserDetails, navigate])
 
     return (
-        <div className='grid grid-rows-10 w-full h-screen'>
+        <div className='grid grid-rows-10 w-full min-h-dvh'>
             <div className='row-span-1 grid justify-items-start content-center text-lg font-medium bg-white text-black drop-shadow-md pl-4'>
                 Account Settings
             </div>

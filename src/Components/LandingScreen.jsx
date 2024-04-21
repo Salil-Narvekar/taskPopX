@@ -16,6 +16,7 @@ const LandingScreen = () => {
     return (
         <div className="flex flex-col min-h-dvh bg-gray-100">
             <div className="flex-grow"></div>
+            
             <div className="grid grid-cols-1 gap-4 justify-items-center px-4 py-8 md:justify-items-start md:px-8">
                 <div className="text-center">
                     <HeaderText text="Welcome to PopX" />

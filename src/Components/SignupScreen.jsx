@@ -61,7 +61,7 @@ const SignupScreen = () => {
     }, [signUpDetails])
 
     return (
-        <div className='grid justify-items-start pl-4 pr-4 pb-8 pt-8 h-screen'>
+        <div className='grid justify-items-start pl-4 pr-4 pb-8 pt-8 min-h-dvh'>
 
             <div className='w-10/12 mb-4'>
                 <HeaderText text='Create your PopX account' />

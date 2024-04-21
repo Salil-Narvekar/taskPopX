@@ -61,7 +61,7 @@ const LoginScreen = () => {
     }, [credentials])
 
     return (
-        <div className='grid gap-2 justify-items-start pl-4 pr-4 pb-8 pt-8'>
+        <div className='grid gap-2 justify-items-start pl-4 pr-4 pb-8 pt-8 min-h-dvh '>
 
             <HeaderText text='Signin to your PopX account' />
             <SubHeaderText text='Lorem ipsum dolor sit amet, consecteture adipiscing elit,' />
