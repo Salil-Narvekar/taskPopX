@@ -35,7 +35,7 @@ function App() {
   return (
     <LoggedUserDetails.Provider value={{ loggedUser: loggedUser, dispatch: dispatchUser }}>
 
-      <div className="text-center h-screen font-sans overflow-hidden md:overflow-hidden lg:overflow-hidden" style={{ backgroundColor: '#F7F8F9' }}>
+      <div className="text-center min-h-screen font-sans overflow-hidden" style={{ backgroundColor: '#F7F8F9' }}>
         <HashRouter>
           <Routes>
             <Route path='/' element={<Navigate to='/landingScreen' />} />
