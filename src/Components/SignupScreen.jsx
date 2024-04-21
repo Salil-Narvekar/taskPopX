@@ -63,11 +63,11 @@ const SignupScreen = () => {
     return (
         <div className='grid justify-items-start pl-4 pr-4 pb-8 pt-8 min-h-dvh'>
 
-            <div className='w-10/12 mb-4'>
+            <div className='w-10/12'>
                 <HeaderText text='Create your PopX account' />
             </div>
 
-            <div className='grid grid-rows-7 gap-2 w-full'>
+            <div className='grid grid-rows-6 gap-2 w-full'>
                 <InputField
                     name='name'
                     id='name'
@@ -184,23 +184,20 @@ const SignupScreen = () => {
                         </label>
                     </div>
                 </div>
-            </div>
 
-            <div className='h-8'>
-                {
-                    validate ?
-                        <div className=''>
+                <div className='grid justify-items-start'>
+                    {
+                        validate ?
                             <ValidationMsg errorMsg="All * marked fields are required" />
-                        </div>
 
-                        : validateEmail &&
-                        <div className=''>
+                            : validateEmail &&
                             <ValidationMsg errorMsg="Email should be in proper format abc@gamil.com" />
-                        </div>
-                }
+                    }
+                </div>
             </div>
 
-            <div className='w-full'>
+
+            <div className='w-full pt-10'>
                 <Button
                     name='register'
                     buttonLable='Create Account'

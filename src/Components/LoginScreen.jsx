@@ -61,12 +61,14 @@ const LoginScreen = () => {
     }, [credentials])
 
     return (
-        <div className='grid gap-2 justify-items-start pl-4 pr-4 pb-8 pt-8 min-h-dvh '>
+        <div className='grid gap-4 justify-items-start pl-4 pr-4 pb-8 pt-8'>
 
-            <HeaderText text='Signin to your PopX account' />
-            <SubHeaderText text='Lorem ipsum dolor sit amet, consecteture adipiscing elit,' />
+            <div>
+                <HeaderText text='Signin to your PopX account' />
+                <SubHeaderText text='Lorem ipsum dolor sit amet, consecteture adipiscing elit,' />
+            </div>
 
-            <div className='grid grid-rows-3 gap-2 w-full mt-2'>
+            <div className='grid grid-rows-4 gap-2 w-full'>
                 <InputField
                     name='email'
                     id='email'
@@ -103,20 +105,21 @@ const LoginScreen = () => {
                         login();
                     }}
                 />
+
+                <div className='grid justify-items-start'>
+                    {
+                        validate && !credentials.email ?
+                            <ValidationMsg errorMsg='Email Required' />
+
+                            : validate && !credentials.password ?
+                                <ValidationMsg errorMsg='Password Required' />
+
+                                : validateEmail &&
+                                <ValidationMsg errorMsg="Email should be in proper format abc@gamil.com" />
+                    }
+                </div>
             </div>
 
-            <div>
-                {
-                    validate && !credentials.email ?
-                        <ValidationMsg errorMsg='Email Required' />
-
-                        : validate && !credentials.password ?
-                            <ValidationMsg errorMsg='Password Required' />
-
-                            : validateEmail &&
-                            <ValidationMsg errorMsg="Email should be in proper format abc@gamil.com" />
-                }
-            </div>
         </div>
     )
 }
