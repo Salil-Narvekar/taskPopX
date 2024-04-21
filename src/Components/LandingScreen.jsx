@@ -15,8 +15,8 @@ const LandingScreen = () => {
 
     return (
         <div className='grid grid-rows-12 max-h-screen sm:mb-10 md:mb-10'>
-            <div className='row-span-8'></div>
-            <div className='row-span-4 grid grid-rows-2 gap-2 justify-items-start pl-4 pr-4 pb-8'>
+            <div className='row-span-9'></div>
+            <div className='row-span-3 grid grid-rows-2 gap-2 justify-items-start pl-4 pr-4 pb-8'>
                 <div>
                     <HeaderText text='Welcome to PopX' />
                     <SubHeaderText text='Lorem ipsum dolor sit amet, consectetur adipiscing elit,' />
