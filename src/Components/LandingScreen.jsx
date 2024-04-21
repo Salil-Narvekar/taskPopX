@@ -14,14 +14,14 @@ const LandingScreen = () => {
     }, [])
 
     return (
-        <div className='grid grid-rows-2 min-h-screen'>
-            <div className='row-span-2'></div>
-            <div className='grid grid-rows-2 gap-2 justify-items-start pl-4 pr-4 pb-8'>
+        <div className='grid grid-rows-12 max-h-screen sm:mb-10 md:mb-10'>
+            <div className='row-span-8'></div>
+            <div className='row-span-4 grid grid-rows-2 gap-2 justify-items-start pl-4 pr-4 pb-8'>
                 <div>
                     <HeaderText text='Welcome to PopX' />
                     <SubHeaderText text='Lorem ipsum dolor sit amet, consectetur adipiscing elit,' />
                 </div>
-                <div className='grid grid-rows-2 gap-2 w-full'>
+                <div className='grid grid-rows-2 gap-4 xl:gap-2 w-full'>
                     <Button name='createAccount' buttonLable='Create Account' color='primary' onClick={() => navigate('/signupScreen')} />
                     <Button name='login' buttonLable='Already Registered ? Login' color='grey' onClick={() => navigate('/loginScreen')} />
                 </div>
