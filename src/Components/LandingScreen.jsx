@@ -14,8 +14,8 @@ const LandingScreen = () => {
     }, [])
 
     return (
-        <div className='flex flex-col min-h-screen'>
-            <div className='flex-grow'></div>
+        <div className='grid grid-rows-2 min-h-screen'>
+            <div className='row-span-2'></div>
             <div className='grid grid-rows-2 gap-2 justify-items-start pl-4 pr-4 pb-8'>
                 <div>
                     <HeaderText text='Welcome to PopX' />
