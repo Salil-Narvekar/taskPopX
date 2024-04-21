@@ -67,7 +67,7 @@ const SignupScreen = () => {
                 <HeaderText text='Create your PopX account' />
             </div>
 
-            <div className='grid grid-rows-6 gap-2 w-full'>
+            <div className='grid grid-rows-7 gap-2 w-full'>
                 <InputField
                     name='name'
                     id='name'
@@ -186,7 +186,7 @@ const SignupScreen = () => {
                 </div>
             </div>
 
-            <div className='h-10 pt-4'>
+            <div className='h-8'>
                 {
                     validate ?
                         <div className=''>
@@ -200,7 +200,7 @@ const SignupScreen = () => {
                 }
             </div>
 
-            <div className='w-full pt-10'>
+            <div className='w-full'>
                 <Button
                     name='register'
                     buttonLable='Create Account'

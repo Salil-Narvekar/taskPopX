@@ -4,7 +4,7 @@ const InputField = ({ label, name, id, type, placeholder, value, onChange, onInp
     return (
         <div className='grid grid-rows-2 font-sans text-slate-600'>
 
-            <span className="text-xs text-left font-normal rounded-lg z-2 relative w-fit ml-2 pl-1 pr-1 mb-2" style={{ color: '#8D67FF', backgroundColor: '#F7F8F9' }}>
+            <span className="text-xs text-left font-normal rounded-lg z-2 relative w-fit ml-2 pl-1 pr-1 mb-1" style={{ color: '#8D67FF', backgroundColor: '#F7F8F9' }}>
                 <b>
                     {label}
                     {
