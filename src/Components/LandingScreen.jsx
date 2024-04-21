@@ -21,7 +21,7 @@ const LandingScreen = () => {
                     <HeaderText text='Welcome to PopX' />
                     <SubHeaderText text='Lorem ipsum dolor sit amet, consectetur adipiscing elit,' />
                 </div>
-                <div className='grid grid-rows-2 gap-4 xl:gap-2 w-full'>
+                <div className='grid grid-rows-2 gap-2 w-full'>
                     <Button name='createAccount' buttonLable='Create Account' color='primary' onClick={() => navigate('/signupScreen')} />
                     <Button name='login' buttonLable='Already Registered ? Login' color='grey' onClick={() => navigate('/loginScreen')} />
                 </div>
